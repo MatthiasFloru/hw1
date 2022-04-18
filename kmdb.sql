@@ -111,8 +111,7 @@ CREATE TABLE movies (
   movie_title TEXT,
   year_released TEXT,
   mpaa_rating TEXT,
-  studio_id INTEGER,
-  cast_id INTEGER
+  studio_id INTEGER
 );
 
 CREATE TABLE studios (
@@ -138,16 +137,14 @@ INSERT INTO movies (
     movie_title,
     year_released,
     mpaa_rating,
-  studio_id,
-  cast_id
-)
+    studio_id
+    )
 VALUES (
     "Batman Begins",
     "2005",
     "PG-13",
-    1,
     1
-)
+);
 
 -- Batman Begins          2005           PG-13  Warner Bros.
 -- The Dark Knight        2008           PG-13  Warner Bros.
@@ -158,7 +155,7 @@ INSERT INTO studios (
 )
 VALUES (
     "Warner Bros."
-)
+);
 
 INSERT INTO casts (
     movie_id,
@@ -169,14 +166,14 @@ VALUES (
     1,
     1,
     "Bruce Wayne"
-)
+);
 
 INSERT INTO actors (
   name
 )
 VALUES (
     "Christian Bale"
-)
+);
 
 -- Batman Begins          Christian Bale        Bruce Wayne
 -- Batman Begins          Michael Caine         Alfred
@@ -190,7 +187,9 @@ VALUES (
 .print ""
 
 -- The SQL statement for the movies output
--- TODO!
+SELECT movies.movie_title, movies.year_released, movies.mpaa_rating, studios.name
+FROM movies INNER JOIN studios ON movies.studio_id = studios.id
+;
 
 -- Prints a header for the cast output
 .print ""
@@ -200,4 +199,8 @@ VALUES (
 
 
 -- The SQL statement for the cast output
--- TODO!
+SELECT movies.movie_title, actors.name, casts.character
+FROM casts 
+INNER JOIN movies ON movies.id = casts.movie_id
+INNER JOIN actors ON casts.actor_id = actors.id
+;
