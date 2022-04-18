@@ -146,9 +146,31 @@ VALUES (
     1
 );
 
--- Batman Begins          2005           PG-13  Warner Bros.
--- The Dark Knight        2008           PG-13  Warner Bros.
--- The Dark Knight Rises  2012           PG-13  Warner Bros.
+INSERT INTO movies (
+    movie_title,
+    year_released,
+    mpaa_rating,
+    studio_id
+    )
+VALUES (
+    "The Dark Knight",
+    "2008",
+    "PG-13",
+    1
+);
+
+INSERT INTO movies (
+    movie_title,
+    year_released,
+    mpaa_rating,
+    studio_id
+    )
+VALUES (
+    "The Dark Knight Rises",
+    "2012",
+    "PG-13",
+    1
+);
 
 INSERT INTO studios (
     name
@@ -168,6 +190,160 @@ VALUES (
     "Bruce Wayne"
 );
 
+INSERT INTO casts (
+    movie_id,
+    actor_id,
+    character
+)
+VALUES (
+    1,
+    2,
+    "Alfred"
+);
+
+INSERT INTO casts (
+    movie_id,
+    actor_id,
+    character
+)
+VALUES (
+    1,
+    3,
+    "Ra's Al Ghul"
+);
+
+INSERT INTO casts (
+    movie_id,
+    actor_id,
+    character
+)
+VALUES (
+    1,
+    4,
+    "Rachel Dawes"
+);
+
+INSERT INTO casts (
+    movie_id,
+    actor_id,
+    character
+)
+VALUES (
+    1,
+    5,
+    "Commissioner Gordon"
+);
+
+INSERT INTO casts (
+    movie_id,
+    actor_id,
+    character
+)
+VALUES (
+    2,
+    1,
+    "Bruce Wayne"
+);
+
+INSERT INTO casts (
+    movie_id,
+    actor_id,
+    character
+)
+VALUES (
+    2,
+    6,
+    "Joker"
+);
+
+INSERT INTO casts (
+    movie_id,
+    actor_id,
+    character
+)
+VALUES (
+    2,
+    7,
+    "Harvey Dent"
+);
+
+INSERT INTO casts (
+    movie_id,
+    actor_id,
+    character
+)
+VALUES (
+    2,
+    2,
+    "Alfred"
+);
+
+INSERT INTO casts (
+    movie_id,
+    actor_id,
+    character
+)
+VALUES (
+    2,
+    8,
+    "Rachel Dawes"
+);
+
+INSERT INTO casts (
+    movie_id,
+    actor_id,
+    character
+)
+VALUES (
+    3,
+    1,
+    "Bruce Wayne"
+);
+
+INSERT INTO casts (
+    movie_id,
+    actor_id,
+    character
+)
+VALUES (
+    3,
+    5,
+    "Commissioner Gordon"
+);
+
+INSERT INTO casts (
+    movie_id,
+    actor_id,
+    character
+)
+VALUES (
+    3,
+    9,
+    "Bane"
+);
+
+INSERT INTO casts (
+    movie_id,
+    actor_id,
+    character
+)
+VALUES (
+    3,
+    10,
+    "John Blake"
+);
+
+INSERT INTO casts (
+    movie_id,
+    actor_id,
+    character
+)
+VALUES (
+    3,
+    11,
+    "Selina Kyle"
+);
+
 INSERT INTO actors (
   name
 )
@@ -175,11 +351,75 @@ VALUES (
     "Christian Bale"
 );
 
--- Batman Begins          Christian Bale        Bruce Wayne
--- Batman Begins          Michael Caine         Alfred
--- Batman Begins          Liam Neeson           Ra's Al Ghul
--- Batman Begins          Katie Holmes          Rachel Dawes
--- Batman Begins          Gary Oldman           Commissioner Gordon
+INSERT INTO actors (
+  name
+)
+VALUES (
+    "Michael Caine"
+);
+
+INSERT INTO actors (
+  name
+)
+VALUES (
+    "Liam Neeson"
+);
+
+INSERT INTO actors (
+  name
+)
+VALUES (
+    "Katie Holmes"
+);
+
+INSERT INTO actors (
+  name
+)
+VALUES (
+    "Gary Oldman"
+);
+
+INSERT INTO actors (
+  name
+)
+VALUES (
+    "Heath Ledger"
+);
+
+INSERT INTO actors (
+  name
+)
+VALUES (
+    "Aaron Eckhart"
+);
+
+INSERT INTO actors (
+  name
+)
+VALUES (
+    "Maggie Gyllenhaal"
+);
+
+INSERT INTO actors (
+  name
+)
+VALUES (
+    "Tom Hardy"
+);
+
+INSERT INTO actors (
+  name
+)
+VALUES (
+    "Joseph Gordon-Levitt"
+);
+
+INSERT INTO actors (
+  name
+)
+VALUES (
+    "Anne Hathaway"
+);
 
 -- Prints a header for the movies output
 .print "Movies"
